@@ -1,0 +1,28 @@
+<!-- Urvi Awasthi and Red Maier; November 29th, 2018; Arrays Exercise -->
+<!DOCTYPE html> 
+<html>
+	<head>
+		<!--styling the title, and adding an external style sheet -->
+		<title> Login Page </title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+	</head>
+	
+	<body>
+		<h1> Log In  </h1>
+		<!-- Form to Log In -->       <!-- the form action depends on the text fields, figure this out later -->
+		<form action = "database.php" method = "POST">
+			<!-- this first form asks for the user's name and the model of the car -->
+			<h2>
+				Username: 
+				<input type = "text" name = "username"><br>
+				Password:  
+				<input type = "text" name = "password"> <br>
+				<input type = "submit" value = "Submit">
+			</h2>
+		</form>
+		
+		<!--output is sent to the paragraph with id 'output' -->
+		<p id = "output"> </p>
+		
+	</body>
+</html>

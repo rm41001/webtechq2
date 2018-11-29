@@ -1,4 +1,5 @@
 <?php 
+//somehow connect this page to the results
 include "config.php"; //including the config file
 
 $sql = "CREATE DATABASE grades"; //creating a query 

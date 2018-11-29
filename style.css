@@ -1,0 +1,24 @@
+body {
+	/*changing color of text, body, and aligning elements*/
+	background-color: blue;
+	color: white; 
+	margin: auto;
+	text-align: center;
+	font-family: "Rockwell", Times, serif;
+}
+div {
+	/*changing height width and font-size of divs*/
+	margin: auto; 
+	font-size: 20px; 
+	height: 100px; 
+	width: 1000px; 
+}
+p {
+	font-size: 30px; 
+}
+h1 {
+	font-size: 50px; 
+}
+input {
+	margin: 45px; 
+}
