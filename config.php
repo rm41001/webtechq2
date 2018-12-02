@@ -21,4 +21,4 @@ create table
 	table has columns
 	each column has a data type 
 */
-?>
+?> 

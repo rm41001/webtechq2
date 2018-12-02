@@ -7,29 +7,30 @@
 		<link rel = "stylesheet" type = "text/css" href = "style.css">
 <?php 
 	include "config.php";
-	$sql = "CREATE DATABASE grades"; //creates database
+	include "quizqs.php"; //we need to make quiz questions
+	$sql = "CREATE DATABASE login"; //creates database
 		if (mysqli_query($conn, $sql)) {
-			echo "Database created successfully";
+//			echo "Database created successfully";
 		}
 		else{
-			echo "Error creating database: " . mysqli_error($conn);
+//			echo "Error creating database: " . mysqli_error($conn);
 		}
-	mysqli_select_db($conn, 'grades');//chooses the database
-	// sql to create table
-	$sql = "CREATE TABLE taken(
+	mysqli_select_db($conn, 'login');//chooses the database
+	// sql to create table here so that when you register it is already made for you :))))
+	$sql = "CREATE TABLE register(
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-		fullname VARCHAR(30) NOT NULL,
 		username VARCHAR(30) NOT NULL,
 		password VARCHAR(30) NOT NULL,
-		studentid INT
+		haveTaken VARCHAR(3) NOT NULL,
+		gradeGiven INT NOT NULL
 		)";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "Table taken created successfully";
+			echo "<br>Table taken created successfully";
 		} 
 		else{
 			echo "Error creating table: " . $conn->error;
-
+		}
 ?>
 	</head>
 	
@@ -38,7 +39,7 @@
 		<h1> Log In  </h1>
 		<!-- Form to Log In -->
 		<form action = "checker.php" method = "POST">
-			<!-- this first form asks for the user's name and the model of the car -->
+			<!-- this first form asks for the user's name and the password-->
 			<h2>
 				Username: 
 				<input type = "text" name = "username"><br>
@@ -47,9 +48,7 @@
 				<input type = "submit" value = "Submit">
 			</h2>
 		</form>
-		
-		<!--output is sent to the paragraph with id 'output' -->
-		<p id = "output"> </p>
+
 		
 	</body>
 </html>
