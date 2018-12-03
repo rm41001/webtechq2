@@ -17,7 +17,7 @@ mysqli_select_db($conn, 'login');//chooses the database
 	$fn= $_POST['fullname'];
 
 	$sql = "INSERT INTO register (fullname, username, password, haveTaken, gradeGiven)
-	VALUES('$fn',$un','$pw', 'no', '0')";
+	VALUES('$fn','$un','$pw','no', '0')";
 
 	if (mysqli_query($conn, $sql)) {
 		echo "<br>New record created successfully";
@@ -30,6 +30,9 @@ mysqli_select_db($conn, 'login');//chooses the database
 </head>
 <body>
 <h3> Your information has been created, please go back to the login page :)  </h3>
-<button a href="login.html">
+<button a href="login.html">		
+		<form action = "login.html" method = "POST">
+				<input type = "submit" value = "Go back to login"> 	<!-- Button to go back to log in -->
+		</form>
 </body>
 </html>
