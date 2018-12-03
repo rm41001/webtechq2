@@ -5,11 +5,10 @@
 		<!--styling the title, and adding an external style sheet -->
 		<title> Login Page </title>
 		<link rel = "stylesheet" type = "text/css" href = "style.css">
-<?php 
-	include "config.php";
-	include "createdatabases.php"; //we need to make quiz questions
-
-?>
+	<?php 
+		include "config.php";
+		include "createdatabases.php"; //we need to make quiz questions
+	?>
 	</head>
 	
 	<body>
