@@ -38,7 +38,13 @@
 	$sql = "INSERT INTO questions (question, answer) 
 	VALUES('Who teaches web technologies?', 'Ms. Pandya'), 
 	('Who teaches math?', 'Dr. Davis'), 
-	('Who teaches english?', 'Ms. Townsend'), 
+	('Who teaches english?', 'Ms. Townsend'),	
+	('Who teaches french?', 'Monseuir Marshall'),	
+	('Who teaches spanish?', 'Senora De Avila'),	
+	('Who teaches chinese?', 'Wang Laoshi'),	
+	('Who teaches german?', 'Frau Michalak'),	
+	('Who teaches ModPhys?', 'Dr. Dong'), 
+	('Who teaches choir?', 'Ms. Cooley'), 
 	('Who teaches orchestra', 'Mrs. McCarthy');";
 	if(mysqli_query($conn, $sql)) {
 		echo "<br>New record created successfully";
