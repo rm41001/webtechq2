@@ -11,12 +11,43 @@
 		<h1> Thank you for finishing the quiz! Here are your results: </h1>
 	
 		<!--Put results of quiz here later -->
+		<?php 
+			$score = 0; 
+			$i = 1; 
+			while ($i < 11)
+			{
+				$correctanswer = $_POST["$i"];				
+				if ($correctanswer == 'correct')
+				{
+					$score++; 
+				}
+			}
+			if ($score > 7)
+			{
+				
+				echo "
+					Congratulations! You have passed the quiz! Now click on the button to log out. Thank you for your time!
+					<form action = 'logout.php' method = 'POST'>
+					<input type = 'submit' value = 'Proceed to Logout'><!-- Button to go back to log in -->
+					</form>
+				";
+			$i++; 
+			}
+			else
+			{
+				echo "
+					Sorry. You have failed the quiz. You can either log out through the log out button, or you can log in through the log in button and retake the test.
+					<form action = 'logout.php' method = 'POST'>
+					<input type = 'submit' value = 'Go to Log Out'><!-- Button to go back to log out -->
+					</form>
+					
+					<form action = 'login.php' method = 'POST'>					
+					<input type = 'submit' value = 'Go to Log In'><!-- Button to go back to log in -->
+					</form>
+					"; 
+			}
+		?>
 
-		
-		<form action = "logout.php" method = "POST">
-
-				<input type = "submit" value = "Logout"> 	<!-- Button to go back to log in -->
-		</form>
 
 	</body>
 </html>
