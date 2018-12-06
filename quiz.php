@@ -9,16 +9,20 @@
 	
 	<body>
 		<h1> Here is the quiz, good luck!  </h1>
-		<form action = "results.html" method = "POST">
+		<form action = "results.php" method = "POST">
 			<?php
-				$sql = 'SELECT * FROM products';
+				include "config.php"; 
+				mysqli_select_db($conn, 'login');//chooses the database				
+				$sql = 'SELECT * FROM questions ORDER BY RAND()';
 				$result = mysqli_query($conn, $sql); 
-					while($row = mysqli_fetch_assoc($result)) {
-					   echo "	
-					$row['question']: 
-					<input type = 'radio' value = 'correct' checked> $row['answer']; 
-					<input type = 'radio' value = 'incorrect'> $row['ic1']; 
-					<input type = 'radio' value = 'incorrect'> $row['ic2']; 
+				while($row = mysqli_fetch_assoc($result)) {
+					   echo $row['question'].
+				   "<br> 
+					<input type = 'radio' value = 'correct' checked>". $row['answer']." <br>
+					<input type = 'radio' value = 'incorrect'>". $row['ic1'] ."<br>
+					<input type = 'radio' value = 'incorrect'>". $row['ic2']." <br>
+					<input type = 'radio' value = 'incorrect'>". $row['ic3']." <br>
+					<br>
 					   ";
 					}
 			?>
