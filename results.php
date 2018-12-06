@@ -21,6 +21,7 @@
 				{
 					$score++; 
 				}
+				$i++; 
 			}
 			if ($score > 7)
 			{
@@ -31,7 +32,6 @@
 					<input type = 'submit' value = 'Proceed to Logout'><!-- Button to go back to log in -->
 					</form>
 				";
-			$i++; 
 			}
 			else
 			{
@@ -46,6 +46,12 @@
 					</form>
 					"; 
 			}
+			//setting haveTaken to yes
+			include "config.php"; 
+			mysqli_select_db($conn, 'login');//chooses the database	
+			$sql = "UPDATE register SET haveTaken = 'yes' WHERE username = 'user1'"; 
+			$result = mysqli_query($conn, $sql); 
+
 		?>
 
 

@@ -1,10 +1,9 @@
-
-<!-- Urvi Awasthi and Red Maier; November 29th, 2018; Quarter Project -->
+<!-- Urvi Awasthi and Red Maier; November 29th, 2018; Arrays Exercise -->
 <!DOCTYPE html> 
 <html>
 	<head>
 		<!--styling the title, and adding an external style sheet -->
-		<title> Already Taken </title> <!-- The purpose of this is to display a page where the user has already taken the quiz and is not allowed to take it again -->
+		<title> Already Taken </title>
 		<link rel = "stylesheet" type = "text/css" href = "style.css">
 	</head>
 	
@@ -16,5 +15,4 @@
 		</form>
 
 	</body>
-
 </html>

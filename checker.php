@@ -1,4 +1,3 @@
-<!--Red and Urvi QUarter Project due Dec. 9th -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,9 +5,6 @@
 			include "config.php";
 			$un = $_POST['username'];
 			$pw = $_POST['password'];
-			$cookie_name = $_POST['username'];
-			$cookie_value = "John Doe";
-			setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 			mysqli_select_db($conn, 'login');
 			$sql="SELECT * FROM register WHERE username='$un'";
 			$result = mysqli_query($conn, $sql);
