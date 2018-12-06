@@ -49,8 +49,14 @@
 			//setting haveTaken to yes
 			include "config.php"; 
 			mysqli_select_db($conn, 'login');//chooses the database	
-			$sql = "UPDATE register SET haveTaken = 'yes' WHERE username = 'user1'"; 
-			$result = mysqli_query($conn, $sql); 
+			$sql = "UPDATE register SET haveTaken = 'yes' WHERE `username`='$_COOKIE[user]'"; 
+			$result = mysqli_query($conn, $sql);
+			if (mysqli_query($conn, $sql)) {
+				echo "<br>New record updated successfully";
+			} 
+			else{
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}			
 
 		?>
 
