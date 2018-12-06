@@ -11,17 +11,17 @@
 			$result = mysqli_query($conn, $sql);
 			if (mysqli_num_rows($result) == 0) {//checks to see if username is not there
 				echo "<h3>Your information does not exist in the database, please proceed to the registration page by clicking the link below.</h3>";
-				echo "<a href='notregistered.html'>";
+				echo "<a href='notregistered.php'>";
 			} 
 			else {
 				$sql="SELECT * FROM register WHERE haveTaken='no' AND username='$un'";
 				if(mysqli_num_rows($result) == 1){
 					echo "<h3> You have not taken this quiz yet, please proceed";
-					echo "<a href='quiz.html'>";
+					echo "<a href='quiz.php'>";
 				}
 				else{
 					echo "<h3> You have taken this quiz already, please proceed";
-					echo "<a href='alreadytaken.html'>";
+					echo "<a href='alreadytaken.php'>";
 				}
 			}	
 	?>
