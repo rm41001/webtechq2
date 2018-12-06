@@ -9,9 +9,20 @@
 	
 	<body>
 		<h1> Here is the quiz, good luck!  </h1>
-	
 		<form action = "results.html" method = "POST">
-				<input type = "submit" value = "submit"> 	<!-- Button to go back to log in -->
+			<?php
+				$sql = 'SELECT * FROM products';
+				$result = mysqli_query($conn, $sql); 
+					while($row = mysqli_fetch_assoc($result)) {
+					   echo "	
+					$row['question']: 
+					<input type = 'radio' value = 'correct' checked> $row['answer']; 
+					<input type = 'radio' value = 'incorrect'> $row['ic1']; 
+					<input type = 'radio' value = 'incorrect'> $row['ic2']; 
+					   ";
+					}
+			?>
+			<input type = "submit" value = "submit"> 	<!-- Button to go back to log in -->
 		</form>
 
 	</body>
