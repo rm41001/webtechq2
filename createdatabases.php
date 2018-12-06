@@ -27,7 +27,9 @@
 	//sql to make the questions and answers table
 	$sql = "CREATE TABLE questions(
 	question VARCHAR(100) NOT NULL,
-	answer VARCHAR(100) NOT NULL
+	answer VARCHAR(100) NOT NULL,
+	ic1 VARCHAR(100) NOT NULL,
+	ic2 VARCHAR(100) NOT NULL
 	)";
 	if ($conn->query($sql) === TRUE) {
 		echo "<br>Table taken created successfully";
@@ -36,16 +38,16 @@
 		//echo "Error creating table: " . $conn->error;
 	}
 	$sql = "INSERT INTO questions (question, answer) 
-	VALUES('Who teaches web technologies?', 'Ms. Pandya'), 
-	('Who teaches math?', 'Dr. Davis'), 
-	('Who teaches english?', 'Ms. Townsend'),	
-	('Who teaches french?', 'Monseuir Marshall'),	
-	('Who teaches spanish?', 'Senora De Avila'),	
-	('Who teaches chinese?', 'Wang Laoshi'),	
-	('Who teaches german?', 'Frau Michalak'),	
-	('Who teaches ModPhys?', 'Dr. Dong'), 
-	('Who teaches choir?', 'Ms. Cooley'), 
-	('Who teaches orchestra', 'Mrs. McCarthy');";
+	VALUES('Who teaches web technologies?', 'Ms. Pandya', 'Dr. Kind', 'Dr. Davis'), 
+	('Who teaches math?', 'Dr. Davis', 'Ms. Pandya', 'Dr. Kind'), 
+	('Who teaches english?', 'Ms. Townsend', 'Madame', 'Wang Laoshi'),	
+	('Who teaches french?', 'Monseuir Marshall', 'Dr. Dong', 'Sensei'),	
+	('Who teaches spanish?', 'Senora De Avila', 'Ms. Cooley', 'Dr. Carlston'),	
+	('Who teaches chinese?', 'Wang Laoshi', 'Dr. Thurmond', 'Dr. Ahrendt'),	
+	('Who teaches german?', 'Frau Michalak', 'Ms. Pandya', 'Ms. Townsend'),	
+	('Who teaches ModPhys?', 'Dr. Dong', 'Dr. Madon', 'Dr. Pierrehumbert'), 
+	('Who teaches choir?', 'Ms. Cooley', 'Dr. Amacher', 'Dr. Patankar'), 
+	('Who teaches orchestra', 'Mrs. McCarthy', 'Mr. Loo', 'Mr. Brummet');";
 	if(mysqli_query($conn, $sql)) {
 		echo "<br>New record created successfully";
 	} 
