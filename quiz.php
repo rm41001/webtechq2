@@ -9,6 +9,7 @@
 	
 	<body>
 		<h1> Here is the quiz, good luck!  </h1>
+
 		<form action = "results.php" method = "POST">
 			<?php
 				include "config.php"; 
@@ -23,7 +24,7 @@
 					<input type = 'radio' value = 'incorrect'>". $row['ic2']." <br>
 					<input type = 'radio' value = 'incorrect'>". $row['ic3']." <br>
 					<br>
-					   ";
+          ";
 					}
 			?>
 			<input type = "submit" value = "submit"> 	<!-- Button to go back to log in -->

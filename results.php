@@ -11,8 +11,10 @@
 		<h1> Thank you for finishing the quiz! Here are your results: </h1>
 	
 		<!--Put results of quiz here later -->
+
 		
 		<form action = "logout.php" method = "POST">
+
 				<input type = "submit" value = "Logout"> 	<!-- Button to go back to log in -->
 		</form>
 
