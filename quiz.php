@@ -16,7 +16,7 @@
 				$sql = 'SELECT * FROM questions ORDER BY RAND()';
 				$result = mysqli_query($conn, $sql); 
 				$i = 1; 
-				while($row = mysqli_fetch_assoc($result) && $i < 5) {
+				while($row = mysqli_fetch_assoc($result)) {
 					   echo $row['question'].
 				   "<br> 
 					<input type = 'radio' value = 'correct' name = '$i' checked>". $row['answer']." <br>
