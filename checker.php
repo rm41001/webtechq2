@@ -22,8 +22,11 @@
 					header("Location: alreadytaken.php");
 					exit;
 				}
-			}	
-	?>
+			}
+			$cookie_name = "user";
+			$cookie_value = "$un";
+			setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+		?>
 	</head>
 	<body>
 		<h3> Checking your information...  </h3>
