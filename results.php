@@ -36,20 +36,10 @@
 				mysqli_select_db($conn, 'login');//chooses the database	
 				$sql = "UPDATE register SET haveTaken = 'yes' WHERE `username`='$_COOKIE[user]'"; 
 				$result = mysqli_query($conn, $sql);
-				if (mysqli_query($conn, $sql)) {
-					echo "<br>New record updated successfully";
-				} 
-				else{
-					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
+				mysqli_query($conn, $sql);
 				$sql = "UPDATE register SET gradeGiven = '$score' WHERE `username`='$_COOKIE[user]'"; 
 				$result = mysqli_query($conn, $sql);
-				if (mysqli_query($conn, $sql)) {
-					echo "<br>New record updated successfully";
-				} 
-				else{
-					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
+				mysqli_query($conn, $sql); 
 			}
 			else
 			{
@@ -67,12 +57,7 @@
 				mysqli_select_db($conn, 'login');//chooses the database	
 				$sql = "UPDATE register SET gradeGiven = '$score' WHERE `username`='$_COOKIE[user]'"; 
 				$result = mysqli_query($conn, $sql);
-				if (mysqli_query($conn, $sql)) {
-					echo "<br>New record updated successfully";
-				} 
-				else{
-					echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
+				mysqli_query($conn, $sql); 
 			}
 			//setting haveTaken to yes
 		?>

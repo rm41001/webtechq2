@@ -19,12 +19,7 @@ mysqli_select_db($conn, 'login');//chooses the database
 	$sql = "INSERT INTO register (fullname, username, password, haveTaken, gradeGiven)
 	VALUES('$fn','$un','$pw','no', '0')";
 
-	if (mysqli_query($conn, $sql)) {
-		echo "<br>New record created successfully";
-	} 
-	else{
-		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-	}	
+	mysqli_query($conn, $sql);
 
 ?>
 </head>
