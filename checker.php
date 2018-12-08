@@ -13,13 +13,13 @@
 				exit;			
 			} 
 			else {
-				$sql="SELECT * FROM register WHERE haveTaken='no' AND username='$un'"; //checks to see if the person has taken it yet
-				if(mysqli_num_rows($result) == 1){ //if havetaken=no, they take it
+				$sql="SELECT * FROM register WHERE haveTaken='no' AND username='$un'";
+				if(mysqli_num_rows($result) == 1){
 					header("Location: quiz.php");
 					exit;
 				}
 				else{
-					header("Location: alreadytaken.php"); //else, they go to alreadytaken
+					header("Location: alreadytaken.php");
 					exit;
 				}
 			}
