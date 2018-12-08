@@ -59,7 +59,6 @@
 				$result = mysqli_query($conn, $sql);
 				mysqli_query($conn, $sql); 
 			}
-			//setting haveTaken to yes
 		?>
 
 

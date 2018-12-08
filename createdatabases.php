@@ -27,6 +27,7 @@
 	ic2 VARCHAR(100) NOT NULL,
 	ic3 VARCHAR(100) NOT NULL
 	)";
+	mysqli_query($conn, $sql); 
 	$sql = "INSERT INTO questions (question, answer, ic1, ic2, ic3) 
 	VALUES('Who teaches web technologies?', 'Ms. Pandya', 'Dr. Kind', 'Dr. Davis', 'Mr. Loo'), 
 	('Who teaches math?', 'Dr. Davis', 'Ms. Pandya', 'Dr. Kind', 'Dr. Dong'), 

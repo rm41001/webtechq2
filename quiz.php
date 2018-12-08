@@ -18,12 +18,7 @@
 				$i = 1; 
 				while($row = mysqli_fetch_assoc($result)) {
 					   echo $row['question'].
-				   "<br> 
-					<input type = 'radio' value = 'correct' name = '$i' checked>". $row['answer']." <br>
-					<input type = 'radio' value = 'incorrect' name = '$i'>". $row['ic1'] ."<br>
-					<input type = 'radio' value = 'incorrect' name = '$i'>". $row['ic2']." <br>
-					<input type = 'radio' value = 'incorrect' name = '$i'> ". $row['ic3']." <br>
-					<br>
+				   "<br> <input type = 'radio' value = 'correct' name = '$i' checked> ". $row['answer']. "<br><input type = 'radio' value = 'incorrect' name = '$i'>" . $row['ic1'] . "<br><input type = 'radio' value = 'incorrect' name = '$i'>". $row['ic2']." <br><input type = 'radio' value = 'incorrect' name = '$i'> ". $row['ic3']." <br><br>
 					   ";
 					$i++; 
 					}
