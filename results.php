@@ -75,7 +75,6 @@
 				}
 			}
 			//setting haveTaken to yes
-
 		?>
 
 

@@ -5,9 +5,8 @@
 			include "config.php";
 			$un = $_POST['username'];
 			$pw = md5($_POST['password']);
-			$newpw = md5($pw); 
 			mysqli_select_db($conn, 'login');
-			$sql="SELECT * FROM register WHERE username='$un' AND password = $newpw";
+			$sql="SELECT * FROM register WHERE username='$un'AND password = '$pw'";
 			$result = mysqli_query($conn, $sql);
 			if (mysqli_num_rows($result) == 0) {//checks to see if username is not there
 				echo "<h3>Your information does not exist in the database, please proceed to the registration page by clicking the link below.</h3>";

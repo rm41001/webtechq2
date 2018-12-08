@@ -13,7 +13,7 @@
 mysqli_select_db($conn, 'login');//chooses the database
 	// sql to create table
 	$un= $_POST['username'];
-	$pw= $_POST['password'];
+	$pw= md5($_POST['password']);
 	$fn= $_POST['fullname'];
 
 	$sql = "INSERT INTO register (fullname, username, password, haveTaken, gradeGiven)
