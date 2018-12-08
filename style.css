@@ -1,6 +1,6 @@
 body {
 	/*changing color of text, body, and aligning elements*/
-	background-color: blue;
+	background-color:  #6699ff;
 	color: white; 
 	margin: auto;
 	text-align: center;
@@ -19,6 +19,11 @@ p {
 h1 {
 	font-size: 50px; 
 }
-input {
-	margin: 45px; 
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 45px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
 }
